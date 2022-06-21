@@ -1,0 +1,18 @@
+#tp juste prix
+#choisir un nombre entre un et 1000
+from random import * #import du module random pour la fonction radint.
+
+find_number = randint(1, 1000)
+numbergame = 0
+#tant que le jeu n'est pas fini (boucle)
+while numbergame != find_number:
+    numbergame = input("Insérer le juste prix : ") #   -> demander à l'utilisateur "entrer un prix"
+    #   -> sinon on affiche c'est moins ou c'est plus
+    if numbergame < str(find_number):
+        print("C'est plus grand!")
+    elif numbergame > str(find_number):
+        print("C'est plus petit")
+#-------------------------------------------------------------------- 
+    else : #   -> si il trouve le juste prix "c'est gagné!"
+        print("C'est gagné!")
+        break #stop la boucle
